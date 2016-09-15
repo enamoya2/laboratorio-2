@@ -1,0 +1,65 @@
+<!doctype html public "-//W3C//DTD HTML 4.01//EN“>
+<html>
+	<head>
+		<meta name="tipo_contenido" content="text/html;" http-equiv="content-type" charset="utf-8">
+		<title> Pagina de registro </title>
+		<script>
+			function vervalores(){
+				var sAux="";
+				var frm = document.getElementById("registro");
+				for (i=0;i<frm.elements.length-1;i++){
+					sAux += "NOMBRE: " + frm.elements[i].name + " ";
+					sAux += "VALOR: " + frm.elements[i].value + "\n" ;
+				}
+				alert(sAux);
+			}
+</script>
+	</head>
+	<body>
+		<span><a href='layout.html'>Inicio</a></span>
+		<form id="registro" onSubmit='vervalores()'>
+			Registro de un usuario, los campos marcados con (*) son obligatorios
+			<TABLE BORDER=0>
+				<TR>
+					<TD>Nombre y Apellidos (*)</TD>
+					<TD><INPUT type=text name="nombre"></TD>
+				</TR>
+				<TR>
+					<TD>Email (*)</TD>
+					<TD><INPUT type=text name="email"></TD>
+				</TR>
+				<TR>
+					<TD>Password (*)</TD>
+					<TD><INPUT type=password name="password"></TD>
+				</TR>
+				<TR>
+					<TD>Numero de telefono (*)</TD>
+					<TD><INPUT type=text name="tlf"></TD>
+				</TR>
+				<TR>
+					<TD>Especialidad (*)</TD>
+					<TD>
+						<SELECT name="Especialidad">
+							<OPTION VALUE="hardware">Ingenieria de computadores</OPTION>
+							<OPTION VALUE="compu">Computacion</OPTION>
+							<OPTION VALUE="software">Ingenieria del software</OPTION>
+							<OPTION VALUE="otro">Otro</OPTION>
+						</SELECT>
+					</TD>
+				</TR>
+				<TR>
+					<TD>Tecnologias y herramientas en las que esta interesado</TD>
+					<TD>
+					<TEXTAREA name="intereses">
+					</TEXTAREA>
+					</TD>
+				</TR>
+				<TR>
+					<TD COLSPAN=2>
+						<INPUT type="submit" value="Enviar">
+					</TD>
+				</TR>
+			</TABLE>
+		</form>
+	</body>
+</html>
