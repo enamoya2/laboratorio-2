@@ -37,7 +37,7 @@
 			<span><a href='creditos.html'>Creditos</a></span>
 		</nav>
 		<section class="main" id="s1">
-		<form id="registro" onSubmit='vervalores()'>
+		<form id="registro" onSubmit='vervalores()' enctype="multipart/form-data">
 			Registro de un usuario, los campos marcados con (*) son obligatorios
 			<TABLE BORDER=0>
 				<TR>
@@ -72,6 +72,12 @@
 					<TD>
 					<TEXTAREA name="intereses" id="intereses">
 					</TEXTAREA>
+					</TD>
+				</TR>
+				<TR>
+					<TD>Sube una imagen tuya si lo deseas</TD>
+					<TD>
+					<input name="Foto" type="file" />
 					</TD>
 				</TR>
 				<TR>
